@@ -7,7 +7,7 @@
   // Recommended
   "default_locale": "en",
   
-  "description": "LeadMaster CRM Extension",
+  "description": "vTiger CRM Extension",
   "icons":{
     "128":"icon_128.png"
   },
