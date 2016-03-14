@@ -2,7 +2,8 @@
   // Required
   "version": "0.1",
   "manifest_version": 2,
-  "name": "CRM Extension",
+  "name": "Variance CRM Extension",
+  "short_name": "CRM Extension",
   // Recommended
   "default_locale": "en",
   "description": "vTiger CRM Extension",
@@ -23,12 +24,19 @@
   "author": "Vijay Patel",
   
   "background": {
-    "persistent":true,
-    "page":"login.html"
+    "scripts": ["js/varutils.js", "js/varstartup.js"],
+    "persistent": false
+    //"persistent":true,
+    //"page":"login.html"
   },
-  "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
-  ]
+  "permissions": [ "activeTab", "https://ajax.googleapis.com/", "tabs", "storage", "http://*/", "https://*/"],
+  "content_scripts": [
+        {
+            "matches": ["*://mail.google.com/*", "*://outlook.office.com/*", "*://outlook.office365.com/*"],
+            "js": ["js/varcontentscript.js"],
+            "css": []
+        }
+    ],
+    "web_accessible_resources": ["*"]
 }
 
