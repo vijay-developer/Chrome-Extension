@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "VTiger - Gmail & Office Plugin (Corrensa)",
+    "short_name": "Corrensa",
+    "description": "VTiger Plugin for Gmail & Office 365.",
+    "version": "2.1",
+    "permissions": ["tabs", "storage", "http://*/", "https://*/"],
+    "background": {
+        "scripts": ["js/utils.js", "js/startup.js"],
+        "persistent": false
+    },
+    "icons": { "16": "icons/16.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png" },
+    "content_scripts": [
+        {
+            "matches": ["*://mail.google.com/*", "*://outlook.office.com/*", "*://outlook.office365.com/*"],
+            "js": ["js/contentscript.js"],
+            "css": []
+        }
+    ],
+    "web_accessible_resources": ["*"]
+}

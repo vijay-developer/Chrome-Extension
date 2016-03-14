@@ -3,71 +3,32 @@
   "version": "0.1",
   "manifest_version": 2,
   "name": "CRM Extension",
-  
   // Recommended
   "default_locale": "en",
-  
   "description": "vTiger CRM Extension",
   "icons":{
     "128":"icon_128.png"
   },
-
   // Pick one (or none)
-  "browser_action": {
+ /* "browser_action": {
     "default_icon": "icon.png",
     "popup": "login.html"
   },
-
- /* "page_action": {
+*/
+  "page_action": {
   		"default_icon": "icon.png",
 		"popup": "login.html"
 	},
-*/
- // "background_page": "login.html",
-  
   // Optional
   "author": "Vijay Patel",
   
   "background": {
     "persistent":true,
     "page":"login.html"
-    //"scripts": ["script.js"],
-    //"persistent": false
-  }
-}
-
-
-/*{
-	"name": "CRM Extension",
-	"manifest_version": 3,
-	"description": "Connect with LeadMaster CRM",
-	"icons":{
-		"128":"icon_128.png"
-	},
-	
-	"browser_action":	{
-		"default_icon": "icon.png",
-		"popup": "login.html"
-	}
-
-}*/
-
-/*
-//Demo
-{
-  "name": "Page Redder",
-  "description": "Make the current page red",
-  "version": "2.0",
+  },
   "permissions": [
-    "activeTab"
-  ],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "browser_action": {
-    "default_title": "Make this page red"
-  },
-  "manifest_version": 2
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
 }
-*/
+
