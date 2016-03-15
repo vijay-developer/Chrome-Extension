@@ -4,7 +4,7 @@ window.EnLog = false;
      // var resourceBase = 'https://localhost/corrensa/public_html/ui/';
     //var resourceBase = 'https://dashboard.vtexperts.com/uic/';
 	var resourceBase = 'http://174.136.15.141/forecast/';
-	alert(resourceBase)
+	//alert(resourceBase)
      // var Evr = 'dev';
     var Evr = 'prod';
     //var EnLog = ;
@@ -31,7 +31,7 @@ window.EnLog = false;
     }
 
     function getText(url, callback) {
-		alert(url)
+		//alert(url)
         if(url == '') return false;
 
         var xhr = new XMLHttpRequest();
@@ -72,7 +72,7 @@ window.EnLog = false;
     }
 
     function loadScriptFN(scripts, callback) {
-		alert("scripts " + scripts)
+		//alert("scripts " + scripts)
         if(scripts.length == 0) return false;
 
         var scriptBatch = [];
@@ -140,7 +140,7 @@ window.EnLog = false;
         msg.url     = msg.url || '';
         msg.urls    = msg.urls || [];
         msg.list    = msg.list || [];
-		alert("msg.method = " + msg.method)
+		//alert("msg.method = " + msg.method)
         switch (msg.method) {
             case 'insertScript':
                 var scripts = prepareUrl(msg.scripts, msg.version);

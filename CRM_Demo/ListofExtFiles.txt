@@ -21,3 +21,44 @@ https://dashboard.vtexperts.com/uic/libs/scanner-owa.js
 https://dashboard.vtexperts.com/uic/common/apploader-owa.js
 =============================================================
 
+https://dashboard.vtexperts.com/uic/app/models/util_service.js
+https://dashboard.vtexperts.com/uic/app/models/api_provider.js
+https://dashboard.vtexperts.com/uic/app/controllers/entity.js
+https://dashboard.vtexperts.com/uic/app/controllers/inventory.js
+https://dashboard.vtexperts.com/uic/app/controllers/base-index.js
+https://dashboard.vtexperts.com/uic/app/controllers/index.js
+https://dashboard.vtexperts.com/uic/app/controllers/account.js
+https://dashboard.vtexperts.com/uic/app/controllers/calendar.js
+https://dashboard.vtexperts.com/uic/app/controllers/config.js
+https://dashboard.vtexperts.com/uic/app/controllers/person.js
+https://dashboard.vtexperts.com/uic/app/controllers/potential.js
+https://dashboard.vtexperts.com/uic/app/controllers/quote.js
+https://dashboard.vtexperts.com/uic/app/controllers/invoice.js
+https://dashboard.vtexperts.com/uic/app/controllers/search.js
+https://dashboard.vtexperts.com/uic/app/controllers/summary.js
+https://dashboard.vtexperts.com/uic/app/controllers/ticket.js
+https://dashboard.vtexperts.com/uic/app/controllers/popup-detail.js
+
+https://dashboard.vtexperts.com/uic/app/views/index.html
+
+https://dashboard.vtexperts.com/uic/libs/org/css/ui-vendor.css
+https://dashboard.vtexperts.com/uic/libs/vgrome-vertial-tab.css
+https://dashboard.vtexperts.com/uic/libs/select2/select2.css
+https://dashboard.vtexperts.com/uic/libs/datepicker/vgrome-datepicker.css
+https://dashboard.vtexperts.com/uic/libs/timepicker/jquery.timepicker.css
+https://dashboard.vtexperts.com/uic/libs/font-awesome/css/font-awesome-vgrome.css
+https://dashboard.vtexperts.com/uic/libs/metro-checkboxradio.css
+https://dashboard.vtexperts.com/uic/css/global.css
+
+=======================
+
+src: url('https://dashboard.vtexperts.com/uic/libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.3.0');
+src: url('https://dashboard.vtexperts.com/uic/libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+url('https://dashboard.vtexperts.com/uic/libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),
+url('https://dashboard.vtexperts.com/uic/libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'),
+url('https://dashboard.vtexperts.com/uic/libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),
+url('https://dashboard.vtexperts.com/uic/libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+
+src: url('https://dashboard.vtexperts.com/uic/libs/fonts/metroSysIcons.woff') format('woff'),
+url('https://dashboard.vtexperts.com/uic/libs/fonts/metroSysIcons.ttf') format('truetype'),
+url('https://dashboard.vtexperts.com/uic/libs/fonts/metroSysIcons.svg#metroSysIcons') format('svg');
