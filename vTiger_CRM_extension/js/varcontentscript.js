@@ -2,7 +2,7 @@ var randKey = Math.random();
 
 chrome.runtime.sendMessage({
     method: 'insertScript',
-    scripts: ['main.js'],
+    scripts: ['ext_js/varmain.js'],
     version: randKey,
     nocache: true
 }, function (response) {
