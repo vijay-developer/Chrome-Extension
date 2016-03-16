@@ -4,7 +4,7 @@ window.EnLog = false;
      // var resourceBase = 'https://localhost/corrensa/public_html/ui/';
     //var resourceBase = 'https://dashboard.vtexperts.com/uic/';
 	var resourceBase = 'http://174.136.15.141/forecast/';
-	//alert(resourceBase)
+	alert(resourceBase)
      // var Evr = 'dev';
     var Evr = 'prod';
     //var EnLog = ;
@@ -31,7 +31,7 @@ window.EnLog = false;
     }
 
     function getText(url, callback) {
-		//alert(url)
+		alert(url)
         if(url == '') return false;
 
         var xhr = new XMLHttpRequest();
