@@ -31,7 +31,7 @@ window.EnLog = false;
     }
 
     function getText(url, callback) {
-		alert(url)
+		//alert(url)
         if(url == '') return false;
 
         var xhr = new XMLHttpRequest();

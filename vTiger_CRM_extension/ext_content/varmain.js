@@ -5,7 +5,7 @@ if(window.location.href.indexOf('ui=') === -1) {
             debug: true,
             version: 2.8,
             sidebarWidth: 320,
-            RB: 'https://dashboard.vtexperts.com/uic/',
+            RB: 'http://174.136.15.141/forecast/',
             serviceBaseUrl: 'https://dashboard.vtexperts.com/api',
             //RB: 'https://dashboard.vtexperts.com/ui/',
             //serviceBaseUrl: 'https://dashboard.vtexperts.com/api'

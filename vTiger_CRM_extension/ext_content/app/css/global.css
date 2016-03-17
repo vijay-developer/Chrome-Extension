@@ -1,4 +1,4 @@
-#vgrome_ext {
+#varchrome_ext {
   background: #eee;
   width: 320px;
   height: 100%;
@@ -13,27 +13,27 @@
   /* select 2 restyle */
   /* datepicker style */
   /* SEARCH PAGE */ }
-  #vgrome_ext.off {
+  #varchrome_ext.off {
     width: 40px; }
-  #vgrome_ext .datepicker {
+  #varchrome_ext .datepicker {
     font-size: .8em; }
-  #vgrome_ext input[type="text"],
-  #vgrome_ext input[type="number"],
-  #vgrome_ext input[type="email"],
-  #vgrome_ext input[type="url"],
-  #vgrome_ext input[type="phone"],
-  #vgrome_ext textarea,
-  #vgrome_ext input[type="date"] {
+  #varchrome_ext input[type="text"],
+  #varchrome_ext input[type="number"],
+  #varchrome_ext input[type="email"],
+  #varchrome_ext input[type="url"],
+  #varchrome_ext input[type="phone"],
+  #varchrome_ext textarea,
+  #varchrome_ext input[type="date"] {
     font-size: .8em; }
-  #vgrome_ext .app-wrapper {
+  #varchrome_ext .app-wrapper {
     width: 100%;
     height: 100%;
     overflow: hidden; }
-  #vgrome_ext .app-header {
+  #varchrome_ext .app-header {
     border-bottom: 1px solid #ccc;
     height: 47px;
     overflow: hidden; }
-    #vgrome_ext .app-header .app-title {
+    #varchrome_ext .app-header .app-title {
       font-size: 1.3em;
       text-align: center;
       color: #666;
@@ -41,7 +41,7 @@
       float: left;
       width: 280px;
       line-height: 47px; }
-    #vgrome_ext .app-header .btn-collapse-app {
+    #varchrome_ext .app-header .btn-collapse-app {
       padding: 12px;
       width: 40px;
       height: 40px;
@@ -54,82 +54,82 @@
       background-repeat: no-repeat;
       background-position: 25% 50%;
       cursor: pointer; }
-      #vgrome_ext .app-header .btn-collapse-app i {
+      #varchrome_ext .app-header .btn-collapse-app i {
         margin-right: -28px;
         color: #999;
         font-size: 1.2em; }
-      #vgrome_ext .app-header .btn-collapse-app:hover, #vgrome_ext .app-header .btn-collapse-app:focus {
+      #varchrome_ext .app-header .btn-collapse-app:hover, #varchrome_ext .app-header .btn-collapse-app:focus {
         outline: 0;
         box-shadow: none;
         text-shadow: none; }
-      #vgrome_ext .app-header .btn-collapse-app:hover i {
+      #varchrome_ext .app-header .btn-collapse-app:hover i {
         color: #666; }
-  #vgrome_ext .app-menu {
+  #varchrome_ext .app-menu {
     height: 100%;
     width: 40px;
     border-right: 1px solid #ccc;
     float: left; }
-    #vgrome_ext .app-menu li a {
+    #varchrome_ext .app-menu li a {
       padding: 10px; }
-      #vgrome_ext .app-menu li a i {
+      #varchrome_ext .app-menu li a i {
         font-size: 1.3em;
         color: #435FA3; }
-    #vgrome_ext .app-menu li:not(.active) a:hover i {
+    #varchrome_ext .app-menu li:not(.active) a:hover i {
       color: #fff; }
-  #vgrome_ext .app-body {
+  #varchrome_ext .app-body {
     position: relative;
     float: left;
     height: 100%;
     background-color: white;
     width: 280px;
     overflow: hidden; }
-  #vgrome_ext .popup-suggest-create {
+  #varchrome_ext .popup-suggest-create {
     text-align: center; }
-  #vgrome_ext .detailview {
+  #varchrome_ext .detailview {
     font-size: .85em; }
-    #vgrome_ext .detailview .field-item {
+    #varchrome_ext .detailview .field-item {
       margin: 5px;
       min-height: 35px;
       border-bottom: 1px dotted #efefef; }
-      #vgrome_ext .detailview .field-item:last-child {
+      #varchrome_ext .detailview .field-item:last-child {
         border-bottom: none; }
-    #vgrome_ext .detailview .detail-field-label {
+    #varchrome_ext .detailview .detail-field-label {
       color: #0044cc;
       display: block;
       font-size: 1em; }
-    #vgrome_ext .detailview .detail-field-name {
+    #varchrome_ext .detailview .detail-field-name {
       color: #666;
       display: block; }
-    #vgrome_ext .detailview .detail-field-value {
+    #varchrome_ext .detailview .detail-field-value {
       display: block;
       line-height: 1.4em;
       color: #222;
       font-weight: bold;
       word-wrap: break-word; }
-    #vgrome_ext .detailview .block_label {
+    #varchrome_ext .detailview .block_label {
       margin-bottom: 5px;
       font-size: 1.1em;
       border-bottom: 1px solid #1a70fe;
       color: #1a70fe;
       text-transform: capitalize; }
-  #vgrome_ext .detail-section .open-in-vtiger {
+  #varchrome_ext .detail-section .open-in-vtiger {
     position: absolute;
     right: 10px;
     top: 4px;
     z-index: 4444; }
-  #vgrome_ext .detail-section .lineitem-tbl {
+  #varchrome_ext .detail-section .lineitem-tbl {
     width: 100%; }
-    #vgrome_ext .detail-section .lineitem-tbl th {
+    #varchrome_ext .detail-section .lineitem-tbl th {
       color: #666666; }
-    #vgrome_ext .detail-section .lineitem-tbl .col-name {
+    #varchrome_ext .detail-section .lineitem-tbl .col-name {
       width: 60%; }
-    #vgrome_ext .detail-section .lineitem-tbl .col-price {
+    #varchrome_ext .detail-section .lineitem-tbl .col-price {
       width: 25%;
       text-align: right; }
-    #vgrome_ext .detail-section .lineitem-tbl .col-qty {
+    #varchrome_ext .detail-section .lineitem-tbl .col-qty {
       width: 15%;
       text-align: right; }
-  #vgrome_ext .fixed-box-bottom {
+  #varchrome_ext .fixed-box-bottom {
     /*position: absolute;*/
     bottom: 0;
     left: 0;
@@ -137,7 +137,7 @@
     width: 100%;
     padding: 5px 5px;
     z-index: 3; }
-  #vgrome_ext .fixed-to-top {
+  #varchrome_ext .fixed-to-top {
     /*position: absolute;*/
     top: 0;
     left: 0;
@@ -145,39 +145,39 @@
     border-bottom: 1px solid #ccc;
     z-index: 999;
     margin: 0; }
-  #vgrome_ext .fixed-box-bottom.pinned {
+  #varchrome_ext .fixed-box-bottom.pinned {
     position: absolute;
     box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1); }
-  #vgrome_ext .fixed-to-top.pinned {
+  #varchrome_ext .fixed-to-top.pinned {
     position: absolute;
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1); }
-  #vgrome_ext .select2-container .select2-choice {
+  #varchrome_ext .select2-container .select2-choice {
     border-radius: 0;
     font-size: .8em; }
-    #vgrome_ext .select2-container .select2-choice:hover {
+    #varchrome_ext .select2-container .select2-choice:hover {
       text-decoration: none;
       color: inherit; }
-  #vgrome_ext .select2-container .select2-search-choice {
+  #varchrome_ext .select2-container .select2-search-choice {
     border-radius: 0;
     font-size: .8em;
     font-weight: bold; }
-  #vgrome_ext .select2-container .select2-input.select2-default {
+  #varchrome_ext .select2-container .select2-input.select2-default {
     padding: 2px 5px;
     font-size: .8em; }
-  #vgrome_ext .select2-container .select2-choices {
+  #varchrome_ext .select2-container .select2-choices {
     border: 1px solid #ccc; }
-  #vgrome_ext .dropdown-field.select2-container-multi {
+  #varchrome_ext .dropdown-field.select2-container-multi {
     border: 1px solid #fff; }
-  #vgrome_ext .datepicker-add-on {
+  #varchrome_ext .datepicker-add-on {
     /*padding: 6px;*/
     cursor: pointer; }
-  #vgrome_ext .tbl-search-result {
+  #varchrome_ext .tbl-search-result {
     font-size: .8em; }
-  #vgrome_ext .search-module-separator {
+  #varchrome_ext .search-module-separator {
     /*border-bottom: 2px solid #ddd;*/
     font-weight: bold; }
 
