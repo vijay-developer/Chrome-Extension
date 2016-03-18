@@ -1,0 +1,1 @@
+window.XXX = 'yyy';

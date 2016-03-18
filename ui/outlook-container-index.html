@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Outlook desktop index</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var fileQueue = {
+            version: 'v'+Math.random(),
+            files: ["outlook-desktop-main.js"],
+            useCache: false
+        };
+        var content = DownloadResource(JSON.stringify(fileQueue));
+        eval(content);
+    </script>
+</body>
+</html>
