@@ -1,0 +1,49 @@
+<div class="app-wrapper clearfix" ng-controller="IndexCtrl" data-ng-init="init()" id="index-container">
+    
+    <div class="app-header clearfix">
+        <button href="#" class="btn btn-primary btn-collapse-app"
+                ng-click="collapseSidebar()"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Open netvill">
+            <i class="fa fa-caret-right"></i>
+        </button>
+        <div class="app-title">{{headerText}}</div>
+    </div>
+    
+    <div class="app-menu">
+        <ul class="nav nav-tabs tabs-left" id="mainMenu">
+            <li class="tooltip-tab" data-toggle="tooltip" data-placement="left" title="{{tab.label}}"
+                ng-repeat="tab in tabsList | orderBy:'order' | filter:{enable: 1}" ng-class="{'active':isSelectedTab(tab.name)}">
+                <a ng-click="selectTab(tab.name)" data-toggle="tab" person-type="{{tab.name}}">
+                    <i class="{{tab.icon}}"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="app-body">
+    </div>
+    <div class="overlay-loading">
+        <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+        <span class="msg"></span>
+    </div>
+
+    <div id="app-dialog-container">
+        <div class="app-dialog">
+            <div class="app-dialog-header">
+                <h4 class="title-text">Warning</h4>
+            </div>
+
+            <div class="app-dialog-body">
+                <span class="message-text"></span>
+            </div>
+
+            <div class="app-dialog-footer">
+                <button class="btn btn-sm btn-primary ok-btn">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
