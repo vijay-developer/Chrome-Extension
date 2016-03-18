@@ -6,9 +6,7 @@ if(window.location.href.indexOf('ui=') === -1) {
             version: 2.8,
             sidebarWidth: 320,
             RB: 'http://174.136.15.141/forecast/ui/',
-            serviceBaseUrl: 'https://dashboard.vtexperts.com/api',
-            //RB: 'https://dashboard.vtexperts.com/ui/',
-            //serviceBaseUrl: 'https://dashboard.vtexperts.com/api'
+            serviceBaseUrl: 'http://174.136.15.141/forecast/api',
         };
 
     var isGmail = location.href.indexOf('mail.google.com') !== -1;

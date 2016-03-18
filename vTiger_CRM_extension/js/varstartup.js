@@ -1,11 +1,9 @@
 window.EnLog = false;
 
 (function (utils) {
-     // var resourceBase = 'https://localhost/corrensa/public_html/ui/';
-    //var resourceBase = 'https://dashboard.vtexperts.com/uic/';
-	var resourceBase = 'http://174.136.15.141/forecast/';
+    var resourceBase = 'http://174.136.15.141/forecast/';
 	alert(resourceBase)
-     // var Evr = 'dev';
+     // var Evr = 'devel';
     var Evr = 'prod';
     //var EnLog = ;
 
@@ -145,7 +143,7 @@ window.EnLog = false;
             case 'insertScript':
                 var scripts = prepareUrl(msg.scripts, msg.version);
 
-                if(Evr === 'dev' || msg.nocache) {
+                if(Evr === 'devel' || msg.nocache) {
                     logMsg('Load scripts from internet v' + msg.version);
                     logMsg(scripts);
 
@@ -180,7 +178,7 @@ window.EnLog = false;
             case 'insertCss':
                 var scripts = prepareUrl(msg.scripts, msg.version);
 
-                if(Evr === 'dev' || msg.nocache) {
+                if(Evr === 'devel' || msg.nocache) {
                     logMsg('Load stylesheets from internet v' + msg.version);
                     logMsg(scripts);
 
@@ -215,7 +213,7 @@ window.EnLog = false;
             case 'download':
                 var url = addVersion(msg.url, msg.version);
 
-                if(Evr === 'dev' || msg.nocache) {
+                if(Evr === 'devel' || msg.nocache) {
                     logMsg('Download data from internet v'+msg.version);
                     logMsg(url);
 
@@ -259,7 +257,7 @@ window.EnLog = false;
             case 'downloadMultiple':
                 var list = prepareUrl(msg.list, msg.version);
 
-                if(Evr === 'dev' || msg.nocache) {
+                if(Evr === 'devel' || msg.nocache) {
                     logMsg('Download multiple data from internet v' + msg.version);
                     logMsg(list);
 
