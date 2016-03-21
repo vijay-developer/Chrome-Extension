@@ -39,7 +39,7 @@
 
         $scope.switchMode = switchMode = function(mode) {
             utils.log($scope.focusObject+':switchMode:'+mode+':begin');
-
+			alert("entity " + tabName)
             utils.showLoading('loading view...');
             utils.log($scope.focusObject+':load_mode_template:begin');
             utils.downloadTemplate('app/views/general/' + mode + '-section.html', function(sectionHtml) {

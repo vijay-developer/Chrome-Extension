@@ -300,8 +300,9 @@
 
             $scope.selectedTab = tabName;
             if ($('.app-body .tab-' + tabName).length === 0) {
-                utils.showLoading('loading view...');
-                utils.downloadTemplate('app/views/' + tabName + '.html', function(tabHtml){
+                alert("base " + tabName)
+				utils.showLoading('loading view...');
+				utils.downloadTemplate('app/views/' + tabName + '.html', function(tabHtml){
                     var template = angular.element(
                         '<div class="tab-content tab-' + tabName + '" ng-show="isSelectedTab(\'' + tabName + '\')"' +
                         ' id="box_' + tabName + '">' + tabHtml + '</div>');
