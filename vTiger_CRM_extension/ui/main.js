@@ -6,7 +6,7 @@ if(window.location.href.indexOf('ui=') === -1) {
             version: 0.1,
             sidebarWidth: 320,
             RB: 'http://174.136.15.141/forecast/ui/',
-            serviceBaseUrl: 'http://174.136.15.141/forecast/api'
+            serviceBaseUrl: 'http://174.136.15.141/forecast/webservice.php'
         };
 
     var isGmail = location.href.indexOf('mail.google.com') !== -1;

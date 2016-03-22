@@ -4,7 +4,7 @@ var PROPS = PROPS || {
         debug: true,
         version: 0.1,
         RB: 'http://174.136.15.141/forecast/ui/',
-        serviceBaseUrl: 'http://174.136.15.141/forecast/api'
+        serviceBaseUrl: 'http://174.136.15.141/forecast/webservice.php'
     };
 
 var queue = ['libs/jquery.min.js',
