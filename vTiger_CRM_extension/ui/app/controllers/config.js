@@ -36,6 +36,7 @@
 
         $scope.submitLogin = submitLogin = function() {
             utils.showLoading('logging in...');
+			alert($scope.username +" == "+ $scope.appKey)
             $apiProvider.login($scope.username, $scope.appKey, function(result){
                 if(result.success == 1) {
                     if(result.sid != null) {

@@ -23,16 +23,16 @@
 
         /* Tab methods */
         $scope.tabsList = [
-            {name: 'calendar', label: 'Calendar', icon: 'fa fa-calendar', order: 5, modules: ['Calendar', 'Events'], enable: 1},
-            {name: 'config', label: 'Config', icon: 'glyphicon glyphicon-cog', order: 9, modules: [], enable: 1},
-            {name: 'potential', label: 'Opportunity', icon: 'fa fa-usd', order: 6, modules: ['Potentials'], enable: 1},
-            {name: 'account', label: 'Organization', icon: 'fa fa-building', order: 4, modules: ['Accounts'], enable: 1},
-            {name: 'person', label: 'Person', icon: 'glyphicon glyphicon-user', order: 3, modules: ['Contacts', 'Leads'], enable: 1},
+            //{name: 'calendar', label: 'Calendar', icon: 'fa fa-calendar', order: 5, modules: ['Calendar', 'Events'], enable: 1},
+            {name: 'config', label: 'Setting', icon: 'glyphicon glyphicon-cog', order: 9, modules: [], enable: 1},
+            //{name: 'potential', label: 'Opportunity', icon: 'fa fa-usd', order: 6, modules: ['Potentials'], enable: 1},
+            //{name: 'account', label: 'Organization', icon: 'fa fa-building', order: 4, modules: ['Accounts'], enable: 1},
+            {name: 'person', label: 'Lead', icon: 'glyphicon glyphicon-user', order: 3, modules: ['Contacts', 'Leads'], enable: 1},
             //{name: 'quote', label: 'Quotes', icon: 'fa fa-file-text-o', order: 8},
             //{name: 'invoice', label: 'Invoice', icon: 'glyphicon glyphicon-usd', order: 8},
-            {name: 'search', label: 'Search', icon: 'glyphicon glyphicon-search', order: 1, modules: [], enable: 1},
-            {name: 'summary', label: 'Summary', icon: 'fa fa-list', order: 2, modules: ['Contacts', 'Leads'], enable: 1},
-            {name: 'ticket', label: 'Ticket', icon: 'fa fa-life-ring', order: 7, modules: ['HelpDesk'], enable: 1}
+            //{name: 'search', label: 'Search', icon: 'glyphicon glyphicon-search', order: 1, modules: [], enable: 1},
+            {name: 'summary', label: 'Detail', icon: 'fa fa-list', order: 2, modules: ['Contacts', 'Leads'], enable: 1}
+            //,{name: 'ticket', label: 'Ticket', icon: 'fa fa-life-ring', order: 7, modules: ['HelpDesk'], enable: 1}
         ];
 
         $scope.collapseSidebar = collapseSidebar = function () {
@@ -75,7 +75,11 @@
             if(!window.hasCallGlobalInit) {
                 utils.log('Index:init:start');
                 //var userId = $.jStorage.get('__uid');
-                var sessionId = $.jStorage.get('__sid');
+				//Temp setting
+				$.jStorage.set('__sid', '764819fd56f147fad3f3f');
+				$.jStorage.set('__uid', '19x338');
+                
+				var sessionId = $.jStorage.get('__sid');
 
                 if (sessionId) {
                     $scope.setAuth(true);

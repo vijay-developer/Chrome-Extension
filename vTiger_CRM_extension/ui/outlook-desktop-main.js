@@ -2,9 +2,9 @@ window.startLoad = (new Date()).getTime();
 
 var PROPS = PROPS || {
         debug: true,
-        version: 2.4,
-        RB: 'https://netvill.dev/ui/',
-        serviceBaseUrl: 'https://netvill.dev/api'
+        version: 0.1,
+        RB: 'http://174.136.15.141/forecast/ui/',
+        serviceBaseUrl: 'http://174.136.15.141/forecast/api'
     };
 
 var queue = ['libs/jquery.min.js',

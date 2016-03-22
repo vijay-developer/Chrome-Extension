@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'metroSysIcons';
-  src: url('https://netvill.dev/ui/libs/fonts/metroSysIcons.woff') format('woff'),
-  url('https://netvill.dev/ui/libs/fonts/metroSysIcons.ttf') format('truetype'),
-  url('https://netvill.dev/ui/libs/fonts/metroSysIcons.svg#metroSysIcons') format('svg');
+  src: url('https://174.136.15.141/forecast/ui/libs/fonts/metroSysIcons.woff') format('woff'),
+  url('https://174.136.15.141/forecast/ui/libs/fonts/metroSysIcons.ttf') format('truetype'),
+  url('https://174.136.15.141/forecast/ui/libs/fonts/metroSysIcons.svg#metroSysIcons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
