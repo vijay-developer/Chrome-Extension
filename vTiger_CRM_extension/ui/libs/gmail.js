@@ -1,15 +1,9 @@
 window.Gmail = function(localJQuery) {
-
-  /*
-   Use the provided 'jQuery' if possible, in order to avoid conflicts with
-   other extensions that use $ for other purposes.
-   */
   var $;
   if (typeof localJQuery !== "undefined")
     $ = localJQuery;
   else if (typeof jQuery !== "undefined")
     $ = jQuery;
-  // else leave $ undefined, which may be fine for some purposes.
 
   var api = {
     get : {},
@@ -22,13 +16,11 @@ window.Gmail = function(localJQuery) {
     compose : {}
   };
 
-
-  api.version           = "0.4";
+  api.version           = "0.1";
   api.tracker.globals   = GLOBALS;
   api.tracker.view_data = typeof VIEW_DATA !== 'undefined' ? VIEW_DATA : [];
   api.tracker.ik        = api.tracker.globals[9];
   api.tracker.hangouts  = undefined;
-
 
   api.get.last_active = function() {
     var data = api.tracker.globals[17][15];
@@ -39,7 +31,6 @@ window.Gmail = function(localJQuery) {
       time_relative : data[10]
     }
   }
-
 
   api.get.loggedin_accounts = function() {
     var data = api.tracker.globals[17][23];
@@ -52,16 +43,13 @@ window.Gmail = function(localJQuery) {
     return users;
   }
 
-
   api.get.user_email = function() {
     return api.tracker.globals[10];
   };
 
-
   api.get.localization = function() {
     return api.tracker.globals[17][8][8];
   };
-
 
   api.check.is_thread = function() {
     var check_1 = $('.nH .if').children(":eq(1)").children().children(":eq(1)").children();
@@ -70,11 +58,9 @@ window.Gmail = function(localJQuery) {
     return check_1.length > 1 || check_2.length > 1;
   };
 
-
   api.dom.inbox_content = function() {
     return $('div[role=main]:first');
   }
-
 
   api.check.is_preview_pane = function() {
     var dom = api.dom.inbox_content();
@@ -95,7 +81,6 @@ window.Gmail = function(localJQuery) {
     return dom.length > 1;
   }
 
-
   api.check.is_horizontal_split = function() {
     var dom = api.dom.inbox_content();
     var box = dom.find("[gh=tl]").find('.nn');
@@ -103,27 +88,22 @@ window.Gmail = function(localJQuery) {
     return box.length == 0;
   }
 
-
   api.check.is_vertical_split = function() {
     return api.check.is_horizontal_split() == false;
   }
-
 
   api.check.is_tabbed_inbox = function() {
     return $(".aKh").length == 1;
   }
 
-
   api.check.is_right_side_chat = function() {
     return $('.ApVoH')[0].getAttribute('aria-labelledby') == ':wf';
   }
-
 
   api.check.is_google_apps_user =function() {
     var email = api.get.user_email();
     return email.indexOf('gmail.com', email.length - 'gmail.com'.length) == -1;
   }
-
 
   api.get.storage_info = function() {
     var div = $('.md.mj').find('div')[0];
@@ -133,7 +113,6 @@ window.Gmail = function(localJQuery) {
 
     return {used : used, total : total, percent : Math.floor(percent)}
   }
-
 
   api.dom.inboxes = function() {
     var dom = api.dom.inbox_content();

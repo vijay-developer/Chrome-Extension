@@ -1,14 +1,9 @@
-window.EnLog = false;
-
 (function (utils) {
     var resourceBase = 'http://174.136.15.141/forecast/';
 	alert(resourceBase)
-     // var Evr = 'devel';
-    var Evr = 'prod';
-    //var EnLog = ;
 
     function logMsg(msg) {
-        if(window.EnLog) console.log(msg);
+        console.log(msg);
     }
 
     // Does not handle save return value
@@ -142,169 +137,112 @@ window.EnLog = false;
         switch (msg.method) {
             case 'insertScript':
                 var scripts = prepareUrl(msg.scripts, msg.version);
+				//Check storage cache
+				var hashName = utils.md5(scripts.join('_'));
+				hashName += '_'+msg.version;
 
-                if(Evr === 'devel' || msg.nocache) {
-                    logMsg('Load scripts from internet v' + msg.version);
-                    logMsg(scripts);
-
-                    loadScriptFN(scripts, function(content) {
-                        chrome.tabs.executeScript(sender.tab.id, {code: content});
-                        sendResponse({});
-                    });
-                } else {
-                    //Check storage cache
-                    var hashName = utils.md5(scripts.join('_'));
-                    hashName += '_'+msg.version;
-
-                    utils.memRead(hashName, function(dbRes) {
-                        if(!utils.isEmpty(dbRes[hashName])) {
-                            logMsg('Load scripts from local v' + msg.version);
-                            logMsg(scripts);
-                            chrome.tabs.executeScript(sender.tab.id, {code: dbRes[hashName]});
-                            sendResponse({});
-                        } else {
-                            logMsg('Load scripts from internet v' + msg.version);
-                            logMsg(scripts);
-                            loadScriptFN(scripts, function(content){
-                                utils.applyVersion(hashName, content);
-                                chrome.tabs.executeScript(sender.tab.id, {code: content});
-                                sendResponse({});
-                            });
-                        }
-                    });
-                }
+				utils.memRead(hashName, function(dbRes) {
+					if(!utils.isEmpty(dbRes[hashName])) {
+						logMsg('Load scripts from local v' + msg.version);
+						logMsg(scripts);
+						chrome.tabs.executeScript(sender.tab.id, {code: dbRes[hashName]});
+						sendResponse({});
+					} else {
+						logMsg('Load scripts from internet v' + msg.version);
+						logMsg(scripts);
+						loadScriptFN(scripts, function(content){
+							utils.applyVersion(hashName, content);
+							chrome.tabs.executeScript(sender.tab.id, {code: content});
+							sendResponse({});
+						});
+					}
+				});
+                
                 return true;
                 break;
             case 'insertCss':
                 var scripts = prepareUrl(msg.scripts, msg.version);
+				//Check storage cache
+				var hashName = utils.md5(scripts.join('_'));
+				hashName += '_'+msg.version;
 
-                if(Evr === 'devel' || msg.nocache) {
-                    logMsg('Load stylesheets from internet v' + msg.version);
-                    logMsg(scripts);
-
-                    loadScriptFN(scripts, function(content) {
-                        chrome.tabs.insertCSS(sender.tab.id, {code: content});
-                        sendResponse({});
-                    });
-                } else {
-                    //Check storage cache
-                    var hashName = utils.md5(scripts.join('_'));
-                    hashName += '_'+msg.version;
-
-                    utils.memRead(hashName, function(dbRes) {
-                        if(!utils.isEmpty(dbRes[hashName])) {
-                            logMsg('Load stylesheets from local v'+msg.version);
-                            logMsg(scripts);
-                            chrome.tabs.insertCSS(sender.tab.id, {code: dbRes[hashName]});
-                            sendResponse({});
-                        } else {
-                            logMsg('Load stylesheets from internet v'+msg.version);
-                            logMsg(scripts);
-                            loadScriptFN(scripts, function(content){
-                                utils.applyVersion(hashName, content);
-                                chrome.tabs.insertCSS(sender.tab.id, {code: content});
-                                sendResponse({});
-                            });
-                        }
-                    });
-                }
+				utils.memRead(hashName, function(dbRes) {
+					if(!utils.isEmpty(dbRes[hashName])) {
+						logMsg('Load stylesheets from local v'+msg.version);
+						logMsg(scripts);
+						chrome.tabs.insertCSS(sender.tab.id, {code: dbRes[hashName]});
+						sendResponse({});
+					} else {
+						logMsg('Load stylesheets from internet v'+msg.version);
+						logMsg(scripts);
+						loadScriptFN(scripts, function(content){
+							utils.applyVersion(hashName, content);
+							chrome.tabs.insertCSS(sender.tab.id, {code: content});
+							sendResponse({});
+						});
+					}
+				});
                 return true;
                 break;
             case 'download':
                 var url = addVersion(msg.url, msg.version);
+				//Check storage cache
+				var hashName = utils.md5(url);
+				hashName += '_'+msg.version;
 
-                if(Evr === 'devel' || msg.nocache) {
-                    logMsg('Download data from internet v'+msg.version);
-                    logMsg(url);
+				utils.memRead(hashName, function(dbRes){
+					if(dbRes[hashName]) {
+						logMsg('Download data from local v' + msg.version);
+						logMsg(url);
+						sendResponse({content: dbRes[hashName]});
+					} else {
+						logMsg('Download data from internet v' + msg.version);
+						logMsg(url);
 
-                    getText(url, function (err, res) {
-                        if (!err) {
-                            sendResponse({
-                                content: res
-                            });
-                        } else {
-                            logMsg('Download error');
-                        }
-                    });
-                } else {
-                    //Check storage cache
-                    var hashName = utils.md5(url);
-                    hashName += '_'+msg.version;
-
-                    utils.memRead(hashName, function(dbRes){
-                        if(dbRes[hashName]) {
-                            logMsg('Download data from local v' + msg.version);
-                            logMsg(url);
-                            sendResponse({content: dbRes[hashName]});
-                        } else {
-                            logMsg('Download data from internet v' + msg.version);
-                            logMsg(url);
-
-                            getText(url, function (err, res) {
-                                if (!err) {
-                                    sendResponse({content: res});
-                                    utils.applyVersion(hashName, res);
-                                } else {
-                                    logMsg('Download error');
-                                }
-                            });
-                        }
-                    });
-                }
-
+						getText(url, function (err, res) {
+							if (!err) {
+								sendResponse({content: res});
+								utils.applyVersion(hashName, res);
+							} else {
+								logMsg('Download error');
+							}
+						});
+					}
+				});
                 return true;
                 break;
             case 'downloadMultiple':
                 var list = prepareUrl(msg.list, msg.version);
+				//Check storage cache
+				var hashName = utils.md5(list.join('_'));
+				hashName += '_'+msg.version;
 
-                if(Evr === 'devel' || msg.nocache) {
-                    logMsg('Download multiple data from internet v' + msg.version);
-                    logMsg(list);
+				utils.memRead(hashName, function(dbRes){
+					if(dbRes[hashName]) {
+						logMsg('Download multiple data from local v' + msg.version);
+						logMsg(list);
+						sendResponse({content: dbRes[hashName]});
+					} else {
+						logMsg('Download multiple data from internet v' + msg.version);
+						logMsg(list);
 
-                    getTextMulti(list, function (err, res) {
-                        if (!err) {
-                            var scriptContent = '';
-                            for (var i in res) {
-                                scriptContent += res[i] + "\n";
-                            }
-                            sendResponse({
-                                content: scriptContent
-                            });
-                        } else {
-                            logMsg('Download error');
-                        }
-                    });
-                } else {
-                    //Check storage cache
-                    var hashName = utils.md5(list.join('_'));
-                    hashName += '_'+msg.version;
-
-                    utils.memRead(hashName, function(dbRes){
-                        if(dbRes[hashName]) {
-                            logMsg('Download multiple data from local v' + msg.version);
-                            logMsg(list);
-                            sendResponse({content: dbRes[hashName]});
-                        } else {
-                            logMsg('Download multiple data from internet v' + msg.version);
-                            logMsg(list);
-
-                            getTextMulti(list, function (err, res) {
-                                if (!err) {
-                                    var scriptContent = '';
-                                    for (var i in res) {
-                                        scriptContent += res[i] + "\n";
-                                    }
-                                    sendResponse({
-                                        content: scriptContent
-                                    });
-                                    utils.applyVersion(hashName, res);
-                                } else {
-                                    logMsg('Download error');
-                                }
-                            });
-                        }
-                    });
-                }
+						getTextMulti(list, function (err, res) {
+							if (!err) {
+								var scriptContent = '';
+								for (var i in res) {
+									scriptContent += res[i] + "\n";
+								}
+								sendResponse({
+									content: scriptContent
+								});
+								utils.applyVersion(hashName, res);
+							} else {
+								logMsg('Download error');
+							}
+						});
+					}
+				});
+			
 
                 return true;
                 break;
