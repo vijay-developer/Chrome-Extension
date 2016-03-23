@@ -154,7 +154,8 @@
 
             $scope.selectedTab = tabName;
             if ($('.app-body .tab-' + tabName).length === 0) {
-                utils.showLoading('loading view...');
+				alert("base selected tab => " + tabName)
+                utils.showLoading('rendering page...');
                 utils.downloadTemplate('app/views/' + tabName + '.html', function(tabHtml){
                     var template = angular.element(
                         '<div class="tab-content tab-' + tabName + '" ng-show="isSelectedTab(\'' + tabName + '\')" \
@@ -304,8 +305,9 @@
 
             $scope.selectedTab = tabName;
             if ($('.app-body .tab-' + tabName).length === 0) {
-                alert("base " + tabName)
-				utils.showLoading('loading view...');
+                alert("base app-body => " + tabName)
+				if(tabName == 'config') tabName = 'index';
+				utils.showLoading('rendering page...');
 				utils.downloadTemplate('app/views/' + tabName + '.html', function(tabHtml){
                     var template = angular.element(
                         '<div class="tab-content tab-' + tabName + '" ng-show="isSelectedTab(\'' + tabName + '\')"' +
