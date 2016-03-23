@@ -1,5 +1,5 @@
 (function($, utils, $HELPER){
-    var $app = window.vgrome;
+    var $app = window.netvill;
 
     $app.controller('SearchCtrl', ['$scope', 'apiProvider', 'lang', function($scope, $apiProvider, $lang) {
 

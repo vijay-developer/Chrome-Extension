@@ -1,5 +1,5 @@
 (function($, utils, $HELPER){
-    var $app = window.vgrome;
+    var $app = window.netvill;
 
     $app.controller('PopupDetailCtrl', ['$scope', '$compile', 'lang', 'apiProvider',
         function ($scope, $compile, $lang, $apiProvider) {
