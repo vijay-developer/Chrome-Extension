@@ -1,5 +1,5 @@
 (function (utils) {
-    var resourceBase = 'http://174.136.15.141/forecast/ui/';
+    var resourceBase = 'https://go.1crm.co.il/1crm/ui/';
 	alert(resourceBase)
 
     function logMsg(msg) {

@@ -25,3 +25,9 @@ v1grome-datepicker.js
 v1grome-datepicker.css
 
 netvill = netvill
+netvill_ext
+netvillnav
+
+https://go.1crm.co.il/1crm/webservice.php/preferences?sid=764819fd56f147fad3f3f
+
+https://go.1crm.co.il/1crm/webservice/preferences?sid=764819fd56f147fad3f3f
