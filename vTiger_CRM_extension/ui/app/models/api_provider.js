@@ -1,6 +1,6 @@
 (function(utils, props, $, $HELPER){
 
-    var $app = window.vgrome;
+    var $app = window.netvill;
 
     // Define language
     $app.lang = {

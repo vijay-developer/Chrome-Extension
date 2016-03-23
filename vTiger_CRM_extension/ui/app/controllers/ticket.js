@@ -1,5 +1,5 @@
 (function($, utils, $HELPER){
-    var $app = window.vgrome;
+    var $app = window.netvill;
 
     $app.controller('TicketCtrl', ['$scope', '$compile', 'lang', 'apiProvider', '$controller', function ($scope, $compile, $lang, $apiProvider, $controller) {
 

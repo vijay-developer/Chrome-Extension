@@ -1,5 +1,5 @@
 (function($, utils, $HELPER){
-    var $app = window.vgrome;
+    var $app = window.netvill;
 
     var ignoreOnCreate = ['modifiedby', 'account_no', 'createdtime', 'duration_hours', 'duration_minutes', 'visibility'];
     var ignoreDefault = ['hdnGrandTotal','lineitems','hdnSubTotal','txtAdjustment','hdnGrandTotal','duration_hours', 'duration_minutes','hdnTaxType','discount_percent','discount_amount','hdnS_H_Amount'];
@@ -433,7 +433,7 @@
                     });
 
                     // Save to history
-                    vgromenav.history.push({ originModule: originObject });
+                    netvillnav.history.push({ originModule: originObject });
                     $scope.switchMode('ref-list');
                     //$scope.safeApply();
                     utils.hideLoading();

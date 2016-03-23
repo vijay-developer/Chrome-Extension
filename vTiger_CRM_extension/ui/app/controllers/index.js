@@ -1,5 +1,5 @@
 (function($, apploader, utils, props, $HELPER){
-    var $app = window.vgrome;
+    var $app = window.netvill;
     // Define main controller
     $app.controller('IndexCtrl', ['$scope', '$rootScope', '$compile', 'apiProvider', 'lang', '$controller', function ($scope, $rootScope, $compile, $apiProvider, $lang, $controller) {
 

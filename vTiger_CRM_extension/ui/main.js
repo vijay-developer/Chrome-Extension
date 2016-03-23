@@ -22,7 +22,7 @@ if(window.location.href.indexOf('ui=') === -1) {
         'libs/jstorage.js',
         'libs/bootstrap.min.js',
         'libs/select2/select2.min.js',
-        'libs/datepicker/vgrome-datepicker.js',
+        'libs/datepicker/netvill-datepicker.js',
         'libs/timepicker/jquery.timepicker.min.js',
         'libs/underscore.js',
         //'libs/scanner.js',

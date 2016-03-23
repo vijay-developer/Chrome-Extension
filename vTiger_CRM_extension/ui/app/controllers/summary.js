@@ -1,5 +1,5 @@
 (function($, utils, $HELPER){
-    var $app = window.vgrome;
+    var $app = window.netvill;
 
     $app.controller('SummaryCtrl', ['$scope', '$compile', 'lang', 'apiProvider', '$controller', function ($scope, $compile, $lang, $apiProvider ,$controller) {
 
@@ -106,7 +106,7 @@
             $scope.$parent.initDetailEvents();
             utils.hideLoading();
 
-            vgromenav.history.push({ module: $scope.focusObject, mode: $scope.mode, id: $scope.focusId });
+            netvillnav.history.push({ module: $scope.focusObject, mode: $scope.mode, id: $scope.focusId });
         };
 
         $scope.getCurrentSummary = function(key){
@@ -114,8 +114,8 @@
         };
 
         $scope.backHistory = backHistory = function () {
-            var lastHistoryIndex = vgromenav.history.length -1;
-            var previous = vgromenav.history[lastHistoryIndex-1];
+            var lastHistoryIndex = netvillnav.history.length -1;
+            var previous = netvillnav.history[lastHistoryIndex-1];
             if(($scope.focusObject == 'Events' && previous.module == 'Calendar') || ($scope.focusObject == previous.module)) {
                 $scope.mode = previous.mode;
             }

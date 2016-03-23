@@ -1,4 +1,4 @@
-.vgrome-enable {
+.netvill-enable {
   /*!
  * bootstrap-vertical-tabs - v1.1.0
  * https://dbtek.github.io/bootstrap-vertical-tabs
@@ -7,86 +7,86 @@
  * License: MIT
  */
 }
-.vgrome-enable .tabs-left,
-.vgrome-enable .tabs-right {
+.netvill-enable .tabs-left,
+.netvill-enable .tabs-right {
   border-bottom: none;
   padding-top: 2px;
 }
-.vgrome-enable .tabs-left {
+.netvill-enable .tabs-left {
   border-right: 1px solid #ddd;
 }
-.vgrome-enable .tabs-right {
+.netvill-enable .tabs-right {
   border-left: 1px solid #ddd;
 }
-.vgrome-enable .tabs-left > li,
-.vgrome-enable .tabs-right > li {
+.netvill-enable .tabs-left > li,
+.netvill-enable .tabs-right > li {
   float: none;
   margin-bottom: 2px;
 }
-.vgrome-enable .tabs-left > li {
+.netvill-enable .tabs-left > li {
   margin-right: -1px;
 }
-.vgrome-enable .tabs-right > li {
+.netvill-enable .tabs-right > li {
   margin-left: -1px;
 }
-.vgrome-enable .tabs-left > li.active > a,
-.vgrome-enable .tabs-left > li.active > a:hover,
-.vgrome-enable .tabs-left > li.active > a:focus {
+.netvill-enable .tabs-left > li.active > a,
+.netvill-enable .tabs-left > li.active > a:hover,
+.netvill-enable .tabs-left > li.active > a:focus {
   border-bottom-color: #ddd;
   border-right-color: transparent;
 }
-.vgrome-enable .tabs-right > li.active > a,
-.vgrome-enable .tabs-right > li.active > a:hover,
-.vgrome-enable .tabs-right > li.active > a:focus {
+.netvill-enable .tabs-right > li.active > a,
+.netvill-enable .tabs-right > li.active > a:hover,
+.netvill-enable .tabs-right > li.active > a:focus {
   border-bottom: 1px solid #ddd;
   border-left-color: transparent;
 }
-.vgrome-enable .tabs-left > li > a {
+.netvill-enable .tabs-left > li > a {
   border-radius: 4px 0 0 4px;
   margin-right: 0;
   display: block;
 }
-.vgrome-enable .tabs-right > li > a {
+.netvill-enable .tabs-right > li > a {
   border-radius: 0 4px 4px 0;
   margin-right: 0;
 }
-.vgrome-enable .sideways {
+.netvill-enable .sideways {
   margin-top: 50px;
   border: none;
   position: relative;
 }
-.vgrome-enable .sideways > li {
+.netvill-enable .sideways > li {
   height: 20px;
   width: 120px;
   margin-bottom: 100px;
 }
-.vgrome-enable .sideways > li > a {
+.netvill-enable .sideways > li > a {
   border-bottom: 1px solid #ddd;
   border-right-color: transparent;
   text-align: center;
   border-radius: 4px 4px 0px 0px;
 }
-.vgrome-enable .sideways > li.active > a,
-.vgrome-enable .sideways > li.active > a:hover,
-.vgrome-enable .sideways > li.active > a:focus {
+.netvill-enable .sideways > li.active > a,
+.netvill-enable .sideways > li.active > a:hover,
+.netvill-enable .sideways > li.active > a:focus {
   border-bottom-color: transparent;
   border-right-color: #ddd;
   border-left-color: #ddd;
 }
-.vgrome-enable .sideways.tabs-left {
+.netvill-enable .sideways.tabs-left {
   left: -50px;
 }
-.vgrome-enable .sideways.tabs-right {
+.netvill-enable .sideways.tabs-right {
   right: -50px;
 }
-.vgrome-enable .sideways.tabs-right > li {
+.netvill-enable .sideways.tabs-right > li {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-.vgrome-enable .sideways.tabs-left > li {
+.netvill-enable .sideways.tabs-left > li {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
