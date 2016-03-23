@@ -1,5 +1,5 @@
 (function($, utils, $HELPER){
-    var $app = window.netvill;
+    var $app = window.vgrome;
 
     $app.controller('PotentialCtrl', ['$scope', '$compile', 'lang', 'apiProvider', '$controller', function ($scope, $compile, $lang, $apiProvider, $controller) {
 

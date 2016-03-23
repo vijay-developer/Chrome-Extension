@@ -1,5 +1,5 @@
 (function(utils, $, $HELPER){
-    var $app = window.netvill;
+    var $app = window.vgrome;
 
     $app.controller('ConfigCtrl', ['$scope', 'apiProvider', function ($scope, $apiProvider) {
 

@@ -6,7 +6,7 @@
     }
 
     function getAvailableWidthForMailView() {
-        var status = $('#netvill_ext').hasClass('off') ? 'off' : 'on';
+        var status = $('#vgrome_ext').hasClass('off') ? 'off' : 'on';
         var fullWidth = $(window).width();
 
         var size = fullWidth;
@@ -20,12 +20,12 @@
     function AppLoader() {
         this.switchSidebarState = switchSidebarState = function(state) {
             utils.log('switch to ' + state);
-            var domState = $('#netvill_ext').hasClass('off') ? 'off' : 'on';
+            var domState = $('#vgrome_ext').hasClass('off') ? 'off' : 'on';
 
             var switchTo = state;
 
             if(switchTo == 'off') {
-                $('#netvill_ext').addClass('off');
+                $('#vgrome_ext').addClass('off');
                 $('.tab-content').hide();
                 $('.header-bar span').hide();
 
@@ -37,7 +37,7 @@
             } else {
                 $('.tab-content').show();
                 $('.header-bar span').show();
-                $('#netvill_ext').removeClass('off');
+                $('#vgrome_ext').removeClass('off');
                 //var mailListWrapperWidth = utils._getMailListWrapper().width();
 
                 getMainContainer().width(getAvailableWidthForMailView());
@@ -52,12 +52,12 @@
             //utils._getMailListWrapper().width(getAvailableWidthForMailView());
         };
 
-        this.bootIntonetvill = bootIntonetvill = function() {
+        this.bootIntoVGrome = bootIntoVGrome = function() {
             utils.log('Apploader:boot:start');
-            var bootElement = document.getElementById('netvill_ext');
+            var bootElement = document.getElementById('vgrome_ext');
 
             angular.element(bootElement).ready(function () {
-                angular.bootstrap(bootElement, ['netvill']);
+                angular.bootstrap(bootElement, ['VGrome']);
             });
 
             utils.log('Apploader:boot:done');
@@ -66,10 +66,10 @@
         this.updateContainerSize = updateContainerSize = function() {
             if(getMainContainer()) {
                 setTimeout(function() {
-                    $('#netvill_ext').height(getMainContainer().height());
+                    $('#vgrome_ext').height(getMainContainer().height());
                     $('.tab-content').height(getMainContainer().height() - 47);
-                    $('#netvill_ext .app-menu').height(getMainContainer().height());
-                    $('#netvill_ext .app-body').height(getMainContainer().height());
+                    $('#vgrome_ext .app-menu').height(getMainContainer().height());
+                    $('#vgrome_ext .app-body').height(getMainContainer().height());
                     $('#app-dialog-container').height($('.app-body').height());
                 }, 500);
             } else {
@@ -124,9 +124,9 @@
 
             function doLoad() {
                 utils.log('Apploader:loadApp');
-                window.netvill = angular.module('netvill', []);
+                window.vgrome = angular.module('VGrome', []);
                 // Enable scp when bootstrap mannualy
-                window.netvill.config(function($sceProvider) {
+                window.vgrome.config(function($sceProvider) {
                     $sceProvider.enabled(false);
                 });
 
@@ -151,9 +151,9 @@
                 ], function(res){
                     // Load index template/controller
                     utils.downloadTemplate('app/views/index.html', function(appHtml) {
-                        var baseHtml = '<div id="netvill_ext" class="netvill-enable">'+appHtml+'</div>';
+                        var baseHtml = '<div id="vgrome_ext" class="vgrome-enable">'+appHtml+'</div>';
 
-                        // Insert netvill into gmail
+                        // Insert vgrome into gmail
                         $(baseHtml).insertAfter(getMainContainer());
 
                         // Calculate time load
@@ -162,7 +162,7 @@
                         utils.log("Resource loaded in " + totalTimeLoad + "ms");
 
                         // Start render angular for app
-                        bootIntonetvill();
+                        bootIntoVGrome();
 
                         var storageState = $.jStorage.get('vte_sidebar_state');
                         if(storageState == null) storageState = 'on';
@@ -180,11 +180,11 @@
                 });
 
                 var cssQueue = ['libs/org/css/ui-vendor.css',
-                    'libs/netvill-vertial-tab.css',
+                    'libs/vgrome-vertial-tab.css',
                     'libs/select2/select2.css',
-                    'libs/datepicker/netvill-datepicker.css',
+                    'libs/datepicker/vgrome-datepicker.css',
                     'libs/timepicker/jquery.timepicker.css',
-                    'libs/font-awesome/css/font-awesome-netvill.css',
+                    'libs/font-awesome/css/font-awesome-vgrome.css',
                     'libs/metro-checkboxradio.css',
                     'css/global-outlook.css'];
 
@@ -202,7 +202,7 @@
             }
 
 
-            //Wait for all gmail's views loaded then boot into netvill
+            //Wait for all gmail's views loaded then boot into VGrome
             //var waitingForGmail = setInterval(function() {
             //    if($('#loading:hidden').length > 0) {
                     doLoad();

@@ -125,7 +125,7 @@
         };
 
         this._getAvailableWidthForMailList = _getAvailableWidthForMailList = function() {
-            var status = $('#netvill_ext').hasClass('off') ? 'off' : 'on';
+            var status = $('#vgrome_ext').hasClass('off') ? 'off' : 'on';
             var fullWidth = $(window).width();
             var leftSidebarWidth = $('.AO').closest('.no').find('.aeN').width();
 

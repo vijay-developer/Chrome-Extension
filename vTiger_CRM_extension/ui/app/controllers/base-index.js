@@ -1,5 +1,5 @@
 (function($, apploader, utils, props, $HELPER){
-    var $app = window.netvill;
+    var $app = window.vgrome;
     // Define main controller
     $app.controller('BaseIndexCtrl', ['$scope', '$rootScope', '$compile', 'apiProvider', 'lang', function ($scope, $rootScope, $compile, $apiProvider, $lang) {
         var guessTab = 'config';
@@ -36,7 +36,7 @@
         ];
 
         $scope.collapseSidebar = collapseSidebar = function () {
-            var sidebarState = $('#netvill_ext').hasClass('off') ? 'on' : 'off';
+            var sidebarState = $('#vgrome_ext').hasClass('off') ? 'on' : 'off';
             apploader.switchSidebarState(sidebarState);
         };
 
@@ -125,7 +125,7 @@
         };
 
         $scope.initUser = initUser = function (callback) {
-            window.netvillnav = {history: []};
+            window.vgromenav = {history: []};
             //Load use preferences
 
             var storageUserData = $.jStorage.get('userdata');
@@ -581,7 +581,7 @@
                     placement: 'left',
                     title: 'Available ' + popoverModule,
                     trigger: 'manual',
-                    template: '<div class="netvill-enable popover" role="tooltip"> \
+                    template: '<div class="vgrome-enable popover" role="tooltip"> \
                                 <div class="arrow"></div> \
                                 <div class="popover-header"> \
                                 <h3 class="popover-title"></h3><a href="#" class="btn-close"><span class="glyphicon glyphicon-remove"></span></a></div> \
@@ -706,12 +706,12 @@
 
                 remoteContainer.popover({
                     container: 'body',
-                    //container: '#netvill_ext',
+                    //container: '#vgrome_ext',
                     placement: 'left',
                     title: $scope.trans('SINGLE_' + type) + ' details',
                     trigger: 'manual',
                     template:
-                        '<div class="netvill-enable popover" role="tooltip"> \
+                        '<div class="vgrome-enable popover" role="tooltip"> \
                             <div class="arrow"></div> \
                                 <div class="popover-header"> \
                                     <h3 class="popover-title"></h3> \
@@ -821,7 +821,7 @@
                     placement: 'top',
                     title: 'Select ' + module,
                     trigger: 'manual',
-                    template: '<div class="netvill-enable popover" role="tooltip"> \
+                    template: '<div class="vgrome-enable popover" role="tooltip"> \
                                 <div class="arrow"></div> \
                                     <div class="popover-header"> \
                                     <h3 class="popover-title"></h3><a href="#" class="btn-close"><span class="glyphicon glyphicon-remove"></span></a></div> \
@@ -1024,7 +1024,7 @@
                         placeholder: "",
                         allowClear: true,
                         data: $(o).data('options'),
-                        container: '#netvill_ext',
+                        container: '#vgrome_ext',
                         separator: ' |##| '
                     };
 
@@ -1089,8 +1089,8 @@
                 $(this).closest('.slt-opt').prev().find('.opt-val').attr('data-opt-val', currDataOptVal);
             });
 
-            $('body').addClass('netvill-popover');
-            $('body').addClass('netvill-icon');
+            $('body').addClass('vgrome-popover');
+            $('body').addClass('vgrome-icon');
         }
     }]);
 
