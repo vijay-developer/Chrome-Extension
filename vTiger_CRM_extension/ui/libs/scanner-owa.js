@@ -40,7 +40,7 @@
                 window.initPerson = focusThreadFrom;
                 var indexScope = angular.element('#index-container').scope();
 
-                utils.showLoading('Looking for "'+focusThreadFrom.name+'" ...');
+                utils.showLoading('Check for match with "'+focusThreadFrom.name+'" ...');
 
                 function callCheckPerson() {
                     if(indexScope == undefined) {
