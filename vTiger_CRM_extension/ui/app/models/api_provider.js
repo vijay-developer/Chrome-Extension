@@ -51,12 +51,16 @@
     $app.provider('apiProvider', function () {
         this.$get = function () {
             function authPost(path, params, callback) {
-                var sid = $.jStorage.get('__sid');
-                params['sid'] = sid;
+				if(path != 'ping'){
+					var sid = $.jStorage.get('__sid');
+					params['sid'] = sid;
 
-                $.post(props.serviceBaseUrl + '/' + path, params, function(result){
-                    callback(result);
-                });
+					$.post(props.serviceBaseUrl + '/' + path, params, function(result){
+						callback(result);
+					});
+				} else {
+					alert('ping path')
+				}
             }
 
             function authGet(path, params, callback) {
@@ -71,7 +75,10 @@
 
             return {
                 login: function (username, authKey, callback) {
-                    $.post(props.serviceBaseUrl + '/login', {username: username, auth_key: authKey}, function(result) {
+					var loginURLService = props.serviceBaseUrl + "?operation=login&username=" + username
+					//props.serviceBaseUrl + '/login'
+                    $.post(loginURLService, {username: username, auth_key: authKey}, function(result) {
+						alert("login => " + result)
                         callback(result);
                     });
                 },

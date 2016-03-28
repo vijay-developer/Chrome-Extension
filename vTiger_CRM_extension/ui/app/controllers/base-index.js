@@ -74,10 +74,10 @@
         $scope.init = init = function () {
             if(!window.hasCallGlobalInit) {
                 utils.log('Index:init:start');
-                //var userId = $.jStorage.get('__uid');
+                var userId = $.jStorage.get('__uid');
 				//Temp setting
-				$.jStorage.set('__sid', '764819fd56f147fad3f3f');
-				$.jStorage.set('__uid', '19x338');
+				//$.jStorage.set('__sid', '764819fd56f147fad3f3f');
+				//$.jStorage.set('__uid', '19x338');
                 
 				var sessionId = $.jStorage.get('__sid');
 
@@ -393,7 +393,8 @@
         };
 
         $scope.setAuth = setAuth = function (status) {
-            $scope.auth = status;
+            //$scope.auth = status;
+			$scope.auth = true;
         };
 
         $scope.loadGuestTab = loadGuestTab = function() {
