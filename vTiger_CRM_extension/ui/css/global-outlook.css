@@ -206,7 +206,7 @@
     z-index: 99999;
     background: #ffffff;
     opacity: .9; }
-    .netvill-enable .overlay-loading .spinner {
+    .netvill-enable .overlay-loading {
       animation: rotator 1.4s linear infinite;
       margin: auto;
       position: absolute;
